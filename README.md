@@ -1,18 +1,17 @@
-# Offline AI Project - Lahore
-By Ghulam Rasool - 100% Offline AI Assistant
+# Offline AI Project - 100% Offline
+By Ghulam Rasool | Lahore, Pakistan
 
-## Features
-- Runs 100% offline - no API key needed
-- Model: Llama 3.2 3B via Ollama
-- Streaming responses - fast typing like ChatGPT
-- Optimized for 15GB RAM, no GPU
-- Works on Python 3.14
-
-## How to Run
-1. Install Ollama from ollama.com
-2. Run: ollama pull llama3.2:3b
-3. Install: pip install ollama
-4. Run: python offline_ai.py
+A ChatGPT-like assistant that runs 100% offline on low-resource PC.
 
 ## Demo
-Works without internet!
+- Model: Llama 3.2 3B via Ollama (quantized)
+- Streaming responses
+- No API key, no internet needed
+- Runs on 15GB RAM, no GPU
+- Python 3.14 compatible
+
+## How to Run
+1. Install Ollama
+2. ollama pull llama3.2:3b
+3. pip install ollama
+4. python offline_ai.py
