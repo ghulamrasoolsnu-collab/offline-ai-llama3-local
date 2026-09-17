@@ -1,19 +1,11 @@
-# Offline AI - Llama 3.1:8B | 100% Local | No API Key
-Built by Ghulam Rasool - Lahore, Pakistan 🇵🇰
+# Offline AI - Llama 3.2:3B - 100% Local
 
-Runs Meta's Llama 3.1:8B completely offline on my Dell laptop. No ChatGPT API, No Internet, Full Privacy.
+Private chatbot that runs offline. No API key, No internet needed.
 
-### Tech Stack
-- Python 3.14 + uv (super fast package manager)
-- Ollama + Llama 3.1:8B (4.9GB local model)
-- VS Code
+**Tech:** Python + Ollama + Llama 3.2:3B + Streaming
 
-### How to run
-uv venv
-uv pip install ollama
+**Run:**
+ollama pull llama3.2:3b
 uv run python offline_ai.py
 
-### Why Offline AI?
-No data leaves your laptop. Perfect for privacy-focused AI in Pakistan.
-
-#OfflineAI #Llama3 #Ollama
+Built by Ghulam Rasool | Lahore, Pakistan
