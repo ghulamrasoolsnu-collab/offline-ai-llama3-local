@@ -1,13 +1,25 @@
 import ollama
-print("Ghulam Rasool | Offline AI - Llama 3.1:8B | 100% Local")
+
+print("=== Offline AI - Ghulam Rasool | Lahore PK ===")
+print("Model: Llama 3.2:3B - FAST MODE | 100% Local")
 print("Type 'exit' to quit\n")
+
+messages = []
 while True:
-    q = input("You: ")
-    if q.lower() in ['exit','quit','bye']:
-        print("Bot: Allah Hafiz!")
+    user_input = input("You: ")
+    if user_input.lower() == 'exit':
         break
+    
+    messages.append({'role': 'user', 'content': user_input})
+    
     print("Bot: ", end="")
-    stream = ollama.chat(model='llama3.1:8b', messages=[{'role':'user','content':q}], stream=True)
-    for c in stream:
-        print(c['message']['content'], end="", flush=True)
+    full_reply = ""
+    # Streaming = feels instant!
+    stream = ollama.chat(model='llama3.2:3b', messages=messages, stream=True, options={'num_thread': 8})
+    for chunk in stream:
+        word = chunk['message']['content']
+        print(word, end="", flush=True)
+        full_reply += word
     print("\n")
+    
+    messages.append({'role': 'assistant', 'content': full_reply})
